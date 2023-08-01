@@ -49,7 +49,7 @@ module.exports = defineConfig({
     },
 
     {
-      name: 'Google Chrome',
+      name: 'GoogleChrome',
       use: { ...devices['Desktop Chrome'], channel: 'chrome' }, // or 'chrome-beta'
     }
 
