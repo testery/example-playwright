@@ -4,7 +4,7 @@ const { test, expect } = require('@playwright/test');
 test('has title two (with screenshot) @titleTest', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
-  await page.screenshot();
+  await page.screenshot({path: "./screenshots/has_title_two.png"});
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
