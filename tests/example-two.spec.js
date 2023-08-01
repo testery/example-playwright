@@ -1,8 +1,10 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
-test('has title two @titleTest', async ({ page }) => {
+test('has title two (with screenshot) @titleTest', async ({ page }) => {
   await page.goto('https://playwright.dev/');
+
+  await page.screenshot();
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
