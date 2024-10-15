@@ -17,11 +17,6 @@ test('get started link one @getStartedLink', async ({ page }) => {
   // Click the get started link.
   await page.getByRole('link', { name: 'Get started' }).click();
 
-  
-  if (Math.random() > 0.5) {
-    throw new Error('Random failure');
-  }
-  
   // Expects the URL to contain intro.
   await expect(page).toHaveURL(/.*intro/);
 });
