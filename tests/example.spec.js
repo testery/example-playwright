@@ -4,9 +4,6 @@ const { test, expect } = require('@playwright/test');
 test('has title one @titleTest', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
-  if (Math.random() > 0.5) {
-    throw new Error('Random failure');
-  }
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
 });
