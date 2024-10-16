@@ -2,8 +2,11 @@
 const { test, expect } = require('@playwright/test');
 
 test.describe("group 1", () => {
-  test('has title two (with screenshot) @titleTest', async ({ page }) => {
+  test.beforeEach( async ({ page }) => { 
     await page.goto('https://playwright.dev/');
+  })
+
+  test('has title two (with screenshot) @titleTest', async ({ page }) => {
   
     await page.screenshot({path: "./screenshots/has_title_two.png"});
   
@@ -12,7 +15,6 @@ test.describe("group 1", () => {
   });
   
   test('get started link two @BeforeTesteryRun @getStartedLink', async ({ page }) => {
-    await page.goto('https://playwright.dev/');
   
     // Click the get started link.
     await page.getByRole('link', { name: 'Get started' }).click();
