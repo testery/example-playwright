@@ -36,7 +36,15 @@ module.exports = defineConfig({
     {
       name: 'GoogleChrome',
       use: { ...devices['Desktop Chrome'], channel: 'chrome' }, // or 'chrome-beta'
-    }
+    },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
 
     /* Test against mobile viewports. */
     // {
@@ -66,4 +74,3 @@ module.exports = defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
-
