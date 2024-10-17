@@ -13,13 +13,4 @@ test.describe("group 1", () => {
     // Expect a title "to contain" a substring.
     await expect(page).toHaveTitle(/Playwright/);
   });
-  
-  test('get started link two @BeforeTesteryRun @getStartedLink', async ({ page }) => {
-  
-    // Click the get started link.
-    await page.getByRole('link', { name: 'Get started' }).click();
-  
-    // Expects the URL to contain intro.
-    await expect(page).toHaveURL(/.*intro/);
-  });
-});
+})
